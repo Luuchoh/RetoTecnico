@@ -5,14 +5,12 @@ const ListaComponent = (user) => {
   const dataUser = user.user;
   const history = useHistory()
 
-  console.log(dataUser);
-
   const Card =(id)=>{
     history.push(`/card/${id}`)
   }
 
   return (
-    <table class="table table-striped">
+    <table className="table table-striped">
       <thead>
         <tr>
           <th scope="col">#</th>

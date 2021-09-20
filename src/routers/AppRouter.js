@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import CardContact from '../views/CardContact';
 import ListaContact from '../views/ListaContact';
 
@@ -8,8 +8,9 @@ const AppRouter = () => {
         <Router>
             <Switch>
                 <Route path="/" component={ListaContact}/>
-                <Route path="/card/:id" component={CardContact}/>
-                <Route />
+                <Route exact path="/card/:id" component={CardContact}/>
+
+                <Redirect to="/" />
             </Switch>            
         </Router>
         
